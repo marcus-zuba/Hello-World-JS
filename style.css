@@ -4,11 +4,11 @@ body{
 	background-color: rgb(69, 210, 235);
 	margin-top: 5%;
 }
-        
+
 #TituloPrincipal{
 	color: rgb(0, 0, 0);
 	letter-spacing: 5px;
-	font-family:'Nunito', arial; 
+	font-family:'Nunito', arial;
 	font-size: 200%;
 	font-weight: 900;
 	text-align: center;
@@ -19,7 +19,12 @@ body{
 	margin-left: 40%;
 	margin-right: 40%;
 }
-        
+
+#TituloPrincipal:hover{
+	color: yellow;
+	text-shadow: 1px 1px black;
+}
+
 img{
 	border: "2";
 	border-color: pink;
