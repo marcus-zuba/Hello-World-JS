@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+body{
+	background-color: rgb(69, 210, 235);
+	margin-top: 5%;
+}
+        
+#TituloPrincipal{
+	color: rgb(0, 0, 0);
+	letter-spacing: 5px;
+	font-family:'Nunito', arial; 
+	font-size: 200%;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: 1px 1px white;
+	border: 5px groove rgb(15, 191, 118);
+	border-spacing: auto;
+	border-radius: 10%;
+	margin-left: 40%;
+	margin-right: 40%;
+}
+        
+img{
+	border: "2";
+	border-color: pink;
+}
