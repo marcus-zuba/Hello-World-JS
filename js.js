@@ -9,11 +9,11 @@ function myMove(){
   function frame() {
       if(vdir==0){
         vpos++;
-        elem.style.top = 120 + vpos + 'px';
+        elem.style.top = 180 + vpos + 'px';
       }
       else{
         vpos--;
-        elem.style.top = 120 + vpos + 'px';
+        elem.style.top = 180 + vpos + 'px';
       }
       if(hdir==0){
         hpos++;
