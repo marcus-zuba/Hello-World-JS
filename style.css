@@ -5,6 +5,23 @@ body{
 	margin-top: 5%;
 }
 
+button{
+	margin-left: 48%;
+}
+
+#Container1{
+	width: auto;
+	weight: auto;
+	color: rgb(69, 210, 235);
+	position: relative;
+}
+
+#Animation1{
+	width: 50px;
+	weight: 50px;
+	position: absolute;
+}
+
 #TituloPrincipal{
 	color: rgb(0, 0, 0);
 	letter-spacing: 5px;
