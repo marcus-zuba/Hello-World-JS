@@ -9,20 +9,17 @@ function myMove(){
   function frame() {
       if(vdir==0){
         vpos++;
-        elem.style.top = 180 + vpos + 'px';
       }
       else{
         vpos--;
-        elem.style.top = 180 + vpos + 'px';
       }
       if(hdir==0){
         hpos++;
-        elem.style.left = hpos + 'px';
       }
       else{
         hpos--;
-        elem.style.left = hpos + 'px';
       }
+      elem.style.transform=`translate(${hpos}px,${vpos}px)`;
       if(vpos==((window).innerHeight))
         vdir=1;
       if(vpos==120)
