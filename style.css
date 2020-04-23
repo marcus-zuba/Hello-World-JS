@@ -1,67 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0 0;
+}
+
+html{
+	color: white;
+}
+
+header{
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border: 5px solid white;
+	border-style: none none solid none;
+}
+
+header ul{
+	box-sizing: border-box;
+	padding: 0;
+	list-style-type: none;
+	width: 80%;
+	margin: 0 10em;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-around;
+}
+
+header ul li{
+	font-family: cursive;
+	padding: 1em;
+	border-radius: 0.5em;
+}
+
+header ul li:hover{
+	cursor: pointer;
+	background-color: white;
+	color:black;
+}
+
+header ul li:active{
+	background-color: white;
+	color: yellow;
+	text-shadow: 1px 1px 5px black;
+}
 
 body{
-	background-color: rgb(69, 210, 235);
-	margin-top: 5%;
+	background-color: black;
 }
 
-button{
-	display: block;
-	margin-left: 47%;
-	background-color: #4CAF50; /* Green */
-	border: 1px solid green;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-}
+#titulo-principal{
+	margin: 0;
+	box-sizing: border-box;
+	font-family: cursive;
+	font-size: 2.5em;
 
-button:hover{
-	background-color: yellow;
-	color: black;
-	border: 1px solid black;
-}
-
-#Container1{
-	width: auto;
-	weight: auto;
-	color: rgb(69, 210, 235);
-	position: relative;
-}
-
-#Animation1{
-	width: 200px;
-	weight: 200px;
-	position: absolute;
-}
-
-#TituloPrincipal{
-	color: rgb(0, 0, 0);
-	letter-spacing: 5px;
-	font-family:'Nunito', arial;
-	font-size: 200%;
-	font-weight: 900;
-	text-align: center;
-	text-shadow: 1px 1px white;
-	border: 5px groove rgb(15, 191, 118);
-	border-spacing: auto;
-	border-radius: 5%;
-	margin-left: 40%;
-	margin-right: 40%;
-}
-
-#TituloPrincipal:hover{
-	color: yellow;
-	text-shadow: 1px 1px black;
-}
-
-img{
-	border: "2";
-	border-color: pink;
-}
-
-iframe{
-	size: 10000px;
 }
