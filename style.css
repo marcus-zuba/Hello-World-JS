@@ -2,6 +2,7 @@ html, body{
 	height: 100%;
 	width: 100%;
 	margin: 0 0;
+	font-family: cursive;
 }
 
 html{
@@ -18,18 +19,22 @@ header{
 	border-style: none none solid none;
 }
 
-header ul{
+nav{
+	width: 100%;
+}
+
+nav ul{
 	box-sizing: border-box;
-	padding: 0;
+	padding: 0 0;
 	list-style-type: none;
-	width: 80%;
-	margin: 0 10em;
+	width: 100%;
+	margin: 0em 0em 1em 0em;
 	display: flex;
 	flex-direction: row;
 	justify-content:space-around;
 }
 
-header ul li{
+nav ul li{
 	font-family: cursive;
 	padding: 1em;
 	border-radius: 0.5em;
@@ -41,7 +46,7 @@ header ul li:hover{
 	color:black;
 }
 
-header ul li:active{
+nav ul li:active{
 	background-color: white;
 	color: yellow;
 	text-shadow: 1px 1px 5px black;
@@ -56,5 +61,25 @@ body{
 	box-sizing: border-box;
 	font-family: cursive;
 	font-size: 2.5em;
+}
 
+#boas-vindas{
+	/* width: 80%; */
+	font-family: cursive;
+	margin: 0em 5em;
+	text-align: center;
+	padding: 5em 0em;
+}
+
+#historia{
+	padding: 3em;
+	text-align: center;
+	/* display: flex; */
+	/* flex-direction: row; */
+	/* justify-content: space-around; */
+}
+
+#imagem{
+	opacity: 0.1;
+	transition: all 1ms ease;
 }
