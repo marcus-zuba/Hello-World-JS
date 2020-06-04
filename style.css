@@ -19,6 +19,12 @@ header{
 	border-style: none none solid none;
 }
 
+footer{
+	padding: 10px;
+	background-color: #3b3c3d;
+	text-align: center;
+}
+
 nav{
 	width: 100%;
 }
@@ -34,21 +40,23 @@ nav ul{
 	justify-content:space-around;
 }
 
-nav ul li{
+nav ul li a{
+	text-decoration:none;
 	font-family: cursive;
+	color:white;
 	padding: 1em;
 	border-radius: 0.5em;
 }
 
-header ul li:hover{
+header ul li a:hover{
 	cursor: pointer;
 	background-color: white;
-	color:black;
+	color:black !important;
 }
 
-nav ul li:active{
+nav ul li a:active{
 	background-color: white;
-	color: yellow;
+	color: yellow !important;
 	text-shadow: 1px 1px 5px black;
 }
 
@@ -72,11 +80,16 @@ body{
 }
 
 #historia{
-	padding: 3em;
+	padding: 0 3em 0 3em;
 	text-align: center;
 	/* display: flex; */
 	/* flex-direction: row; */
 	/* justify-content: space-around; */
+}
+
+#motivacao{
+	padding: 1em 3em 3em 3em;
+	text-align: center;
 }
 
 #imagem{
