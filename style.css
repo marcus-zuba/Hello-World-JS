@@ -9,6 +9,10 @@ html{
 	color: white;
 }
 
+body{
+	background-color: black;
+}
+
 header{
 	height: 20%;
 	display: flex;
@@ -60,8 +64,16 @@ nav ul li a:active{
 	text-shadow: 1px 1px 5px black;
 }
 
-body{
-	background-color: black;
+footer h4 a{
+	text-decoration:none;
+	font-family: cursive;
+	color:white;
+	/* padding: 1em; */
+	border-radius: 0.5em;
+}
+
+footer h4:hover{
+	cursor: pointer;
 }
 
 #titulo-principal{
@@ -76,7 +88,7 @@ body{
 	font-family: cursive;
 	margin: 0em 5em;
 	text-align: center;
-	padding: 5em 0em;
+	padding: 1em 0em 3em 0em;
 }
 
 #historia{
@@ -90,6 +102,54 @@ body{
 #motivacao{
 	padding: 1em 3em 3em 3em;
 	text-align: center;
+}
+
+#quadro-motivacao{
+	border: 10px solid white;
+	display: grid;
+	grid-template-columns: 25% auto;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"menu conteudo"
+		"menu conteudo"
+		"menu conteudo"
+}
+
+#menu-motivacao{
+	grid-area: menu;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	list-style-type: none;
+}
+
+#menu-motivacao li{
+	padding: 0.5em;
+	border-radius: 0.5em;
+	transition: all 500ms ease;
+}
+
+#menu-motivacao li:hover{
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-motivacao-selecionado{
+	background-color: white !important;
+	color:black;
+}
+
+#conteudo-motivacao{
+	grid-area: conteudo;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 0em 2em;
+}
+
+#conteudo-motivacao p {
+	justify-self:center;
+	justify-content: center;
 }
 
 #imagem{
