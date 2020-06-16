@@ -56,8 +56,25 @@ for (let itemMenu of itensMenu) {
     }
 }
 
-function exibirConclusao(){
-
+function exibirConclusao() {
+    let $conclusao = $('#conclusao');
+    let h3a = document.createElement("h3");
+    let text1 = document.createTextNode("Como você pôde perceber, o determinante de uma matriz que só possui " +
+        "um elemento é o próprio elemento! Fácil né?");
+    let text2 = document.createTextNode(" Pronto para continuar aprendendo? Só clicar no botão abaixo para " +
+        "começarmos a ver como calcular os determinantes em matrizes com quatro elementos, ou seja, matrizes 2x2!");
+    h3a.appendChild(text1);
+    h3a.appendChild(document.createElement('br'));
+    h3a.appendChild(text2);
+    let a = document.createElement('a');
+    a.innerHTML='Determinantes em Matrizes 2x2';
+    a.setAttribute('href','2x2.html');
+    a.setAttribute('id','botaoConclusao');
+    $conclusao.fadeOut('fast', function () {
+        $conclusao.append(h3a);
+        $conclusao.append(a);
+        $conclusao.fadeIn('fast');
+    });
 }
 
 $inputMatriz = $(".matriz-value");
@@ -65,13 +82,15 @@ $inputMatriz = $(".matriz-value");
 let foiMudado = false;
 
 function processaMudancaMatriz(evt) {
-    foiMudado = true;
+    if (foiMudado == false) {
+        foiMudado = true;
+        exibirConclusao();
+    }
     let root = document.documentElement;
     let text = $inputMatriz.val();
-    if(text.length!=0){
+    if (text.length != 0) {
         root.style.setProperty('--largura', (text.length));
-    }
-    else{
+    } else {
         root.style.setProperty('--largura', (1));
         text = "0";
     }
@@ -82,9 +101,9 @@ function processaMudancaMatriz(evt) {
     $div.append($det);
 }
 
-if(foiMudado){
-    exibirConclusao();
-}
-
-$inputMatriz.change(processaMudancaMatriz);
+$inputMatriz.keyup(processaMudancaMatriz);
+$inputMatriz.focusout(processaMudancaMatriz);
+$inputMatriz.focus(function () {
+    $(this).val('');
+});
 
