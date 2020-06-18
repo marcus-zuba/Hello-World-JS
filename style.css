@@ -1,6 +1,8 @@
 :root {
-	--largura: 1;
-	--altura: 1;
+	--larguraMatriz: 1; /* Colunas */
+	--alturaMatriz: 1; /* Linhas */
+	--limiteInferiorChave: 25%;
+	--limiteSuperiorChave: 75%;
 }
 
 html, body{
@@ -212,11 +214,11 @@ footer h4:hover{
 	box-sizing: border-box;
 	display: grid;
 	position: relative;
-	grid-template-columns: repeat(var(--largura), 40px);
+	grid-template-columns: repeat(var(--larguraMatriz), 40px);
 	grid-column-gap: 0;
-	grid-template-rows: repeat(var(--altura),2em);
-	width: calc(31.5px*var(--largura) + 6px);
-	height: calc(2em*var(--altura));
+	grid-template-rows: repeat(var(--alturaMatriz),2em);
+	width: calc(31.5px*var(--larguraMatriz) + 6px);
+	height: calc(2em*var(--alturaMatriz));
 	border-left: 3px solid white;
 	border-right: 3px solid white;
 }
@@ -229,7 +231,8 @@ footer h4:hover{
 	display: block;
 	width: calc(100% + 6px);
 	height: 3px;
-	background-image: linear-gradient(to right, white 25%,transparent 25%, transparent 75%, white 75%);
+	background-image: linear-gradient(to right, white var(--limiteInferiorChave),transparent var(--limiteInferiorChave),
+	transparent var(--limiteSuperiorChave), white var(--limiteSuperiorChave));
 }
 
 .matriz::before{
@@ -240,27 +243,37 @@ footer h4:hover{
 	bottom: -3px;
 }
 
+.matriz-value::-webkit-outer-spin-button,
+.matriz-value::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 
 .matriz-value{
 	-webkit-writing-mode: horizontal-tb !important;
+	-webkit-appearance: textfield;
 	text-rendering: auto;
 	letter-spacing: normal;
 	word-spacing: normal;
 	text-transform: none;
 	text-indent: 0px;
 	text-shadow: none;
-	-webkit-appearance: textfield;
 	-webkit-rtl-ordering: logical;
 	box-sizing: border-box;
-	width: calc(31.5px*var(--largura));
+	width: calc(31.5px*var(--larguraMatriz));
 	height: 1em;
-	background-color: mediumseagreen;
+	border: none;
 	border-width: 0;
+	border-radius: 3px;
 	outline: none;
 	color: black;
 	text-align: center;
 	padding: 0;
 	font-size: 2em;
+}
+
+.editavel{
+	background-color: #aeeab0;
 }
 
 #emDesenvolvimento{
