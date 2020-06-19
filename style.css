@@ -1,3 +1,8 @@
+:root {
+	--largura: 1;
+	--altura: 1;
+}
+
 html, body{
 	height: 100%;
 	width: 100%;
@@ -24,6 +29,7 @@ header{
 }
 
 footer{
+	margin-top: 30px;
 	padding: 10px;
 	background-color: #3b3c3d;
 	text-align: center;
@@ -156,3 +162,111 @@ footer h4:hover{
 	opacity: 0.1;
 	transition: all 1ms ease;
 }
+
+#pratica{
+	text-align: center;
+	margin: 0em 5em;
+}
+
+#matriz1x1{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+}
+
+#matriz1x1 h3{
+	padding: 0px 0px 0px 10px;
+}
+
+#conclusao{
+	text-align: center;
+	position: relative;
+}
+
+#botaoConclusao{
+	box-sizing: border-box;
+	margin: auto;
+	top: 20px;
+	display: block;
+	text-decoration:none;
+	font-family: cursive;
+	color:white;
+	background-color: black;
+	border: 3px solid white;
+	padding: 1em;
+	border-radius: 0.5em;
+	width: fit-content;
+	text-align: center;
+}
+
+#botaoConclusao:hover{
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	border: 3px solid black;
+}
+
+.matriz{
+	top:15px;
+	box-sizing: border-box;
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(var(--largura), 40px);
+	grid-column-gap: 0;
+	grid-template-rows: repeat(var(--altura),2em);
+	width: calc(31.5px*var(--largura) + 6px);
+	height: calc(2em*var(--altura));
+	border-left: 3px solid white;
+	border-right: 3px solid white;
+}
+
+.matriz::before, .matriz::after{
+	box-sizing: border-box;
+	position: absolute;
+	left: -3px;
+	content: "";
+	display: block;
+	width: calc(100% + 6px);
+	height: 3px;
+	background-image: linear-gradient(to right, white 25%,transparent 25%, transparent 75%, white 75%);
+}
+
+.matriz::before{
+	top: -3px;
+}
+
+.matriz::after{
+	bottom: -3px;
+}
+
+
+.matriz-value{
+	-webkit-writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	-webkit-appearance: textfield;
+	-webkit-rtl-ordering: logical;
+	box-sizing: border-box;
+	width: calc(31.5px*var(--largura));
+	height: 1em;
+	background-color: mediumseagreen;
+	border-width: 0;
+	outline: none;
+	color: black;
+	text-align: center;
+	padding: 0;
+	font-size: 2em;
+}
+
+#emDesenvolvimento{
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+}
+
+
