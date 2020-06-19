@@ -1,4 +1,4 @@
-import Matriz from 'matriz.js';
+import Matriz from '/matriz.js';
 
 function mudarConteudoMotivacao(indice) {
     let $div = $('#conteudo-motivacao');
