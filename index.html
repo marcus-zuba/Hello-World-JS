@@ -3,10 +3,14 @@
 	<head>
 		<title>O maravilhoso mundo dos Determinantes</title>
 		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" href="imgs/favicon.png">
+		<script src="https://code.jquery.com/jquery-3.5.0.js"
+				integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+				crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
-			<h1 id="titulo-principal"> O maravilhoso mundo dos Determinantes </h1>
+			<a href="index.html"><img id="titulo-principal" src="imgs/logo_0.png" /></a>
 			<nav>
 				<ul>
 					<li><a href="index.html">Introdução</a></li>
@@ -18,11 +22,11 @@
 		</header>
 		<main>
 			<section id="boas-vindas">
-				<h1>Bem vindo ao Maravilhoso Mundo dos Determinantes!</h1>
-				<p>Nesse site você irá aprender sobre a história desses números que são
+				<h1>Bem vindo ao Maravilhoso <span class="vermelhoFlat">Mundo dos Determinantes</span> !!</h1>
+				<p><b>Nesse site você irá aprender sobre a história desses números que são
 					tão especiais, a importância e a aplicação deles e, é claro, aprender
 					como calcular os determinantes dos principais tipos de matrizes, além
-					de um método pra usar em qualquer matriz também!</p>
+					de um método pra usar em qualquer matriz também!</b></p>
 				<h3>Vamos começar? Só descer a tela!</h3>
 			</section>
 			<section id="historia">
@@ -50,14 +54,14 @@
 				<section>
 					<h2>Legal tudo isso, né? <br>
 					Vamos aprender então como calcular efetivamente os determinantes?</h2>
-					<p>Primeiramente é importante sabermos que <b> só podemos calcular determinantes de matrizes quadradas</b>,
+					<p><b>Primeiramente é importante sabermos que <span class="vermelhoFlat">só podemos calcular determinantes de matrizes quadradas</span>,
 						ou seja, que possuem o mesmo número de linhas e o mesmo número de colunas.Vamos começar então da
-						matriz quadrada mais simples possível: Que possui apenas uma linha e uma coluna, ou seja, contém apenas um elemento.</p>
-					<h3>Experimente alterar o número no campo verde da matriz abaixo e veja como se comporta o seu determinante!</h3>
+						matriz quadrada mais simples possível: Que possui apenas uma linha e uma coluna, ou seja, contém apenas um elemento.</b></p>
+					<h3>Experimente alterar o número no campo vermelho da matriz abaixo e veja como se comporta o seu determinante!</h3>
 				</section>
 				<section id="matriz1x1">
 					<div class="matriz">
-						<input class="matriz-value" type="text" placeholder="0" value="1">
+						<input class="matriz-value" type="number" placeholder="0" value="1">
 					</div>
 					<h3>Determinante:</h3>
 					<h3 id="det">1</h3>
@@ -76,8 +80,5 @@
 
 
 	</body>
-	<script src="https://code.jquery.com/jquery-3.5.0.js"
-	integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-	crossorigin="anonymous"></script>
 	<script src="introd.js"></script>
 </html>
