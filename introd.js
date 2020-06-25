@@ -57,21 +57,36 @@ for (let itemMenu of itensMenu) {
 }
 
 function exibirConclusao() {
-    let $conclusao = $('#conclusao');
+
+    //Colocando o determinante na matriz na frente dela
+    let $matriz1x1 = $('#matriz1x1');
     let h3a = document.createElement("h3");
-    let text1 = document.createTextNode("Como você pôde perceber, o determinante de uma matriz que só possui " +
+    let text1 = document.createTextNode("Determinante:");
+    h3a.appendChild(text1);
+    let h3b = document.createElement("h3");
+    h3b.setAttribute('id', "det");
+    $matriz1x1.fadeOut('fast', function () {
+        $matriz1x1.append(h3a);
+        $matriz1x1.append(h3b);
+        $matriz1x1.fadeIn('fast');
+    });
+
+    //Colocando a conclusão
+    let $conclusao = $('#conclusao');
+    let h3c = document.createElement("h3");
+    text1 = document.createTextNode("Como você pôde perceber, o determinante de uma matriz que só possui " +
         "um elemento é o próprio elemento! Fácil né?");
     let text2 = document.createTextNode(" Pronto para continuar aprendendo? Só clicar no botão abaixo para " +
         "começarmos a ver como calcular os determinantes em matrizes com quatro elementos, ou seja, matrizes 2x2!");
-    h3a.appendChild(text1);
-    h3a.appendChild(document.createElement('br'));
-    h3a.appendChild(text2);
+    h3c.appendChild(text1);
+    h3c.appendChild(document.createElement('br'));
+    h3c.appendChild(text2);
     let a = document.createElement('a');
     a.innerHTML='Determinantes em Matrizes 2x2';
     a.setAttribute('href','2x2.html');
     a.setAttribute('id','botaoConclusao');
     $conclusao.fadeOut('fast', function () {
-        $conclusao.append(h3a);
+        $conclusao.append(h3c);
         $conclusao.append(a);
         $conclusao.fadeIn('fast');
     });

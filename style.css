@@ -7,9 +7,9 @@
 
 html, body{
 	height: 100%;
-	width: 100%;
 	margin: 0 0;
-	font-family: 'Montserrat', sans-serif;}
+	font-family: 'Montserrat', sans-serif;
+}
 
 html{
 	color: black;
@@ -21,6 +21,10 @@ body{
 	background-repeat: repeat-y;
 }
 
+header, main{
+	margin-left: 32px;
+}
+
 header{
 	height: 20%;
 	display: flex;
@@ -29,10 +33,13 @@ header{
 	align-items: center;
 	border: 5px solid white;
 	border-style: none none none none;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	box-sizing: border-box;
 }
 
 footer{
-	margin-top: 30px;
+	margin-top: 3em;
 	padding: 10px;
 	background-color: #3b3c3d;
 	text-align: center;
@@ -40,8 +47,8 @@ footer{
 }
 
 nav{
+	margin: 1em 0em 1em 0em;
 	width: 94%;
-	margin-left: 50px;
 	background-color: #3b3c3d;
 }
 
@@ -83,6 +90,7 @@ footer h4:hover{
 }
 
 #titulo-principal{
+	margin-top: 10px;
 	width: auto;
 	height: 75px;
 	display: block;
@@ -94,21 +102,17 @@ footer h4:hover{
 
 #boas-vindas{
 	/* width: 80%; */
-	margin: 0em 5em;
 	text-align: center;
-	padding: 1em 0em 3em 0em;
+	margin: 1em 1em 3em 1em;
 }
 
 #historia{
-	padding: 0 3em 0 3em;
+	margin: 1em 3em 1em 3em;
 	text-align: center;
-	/* display: flex; */
-	/* flex-direction: row; */
-	/* justify-content: space-around; */
 }
 
 #motivacao{
-	padding: 1em 3em 3em 3em;
+	margin: 1em 3em 1.5em 3em;
 	text-align: center;
 }
 
@@ -169,10 +173,11 @@ footer h4:hover{
 
 #pratica{
 	text-align: center;
-	margin: 0em 5em;
+	margin: 1em 1em;
 }
 
 #matriz1x1{
+	margin: 1em 1em;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -184,6 +189,7 @@ footer h4:hover{
 }
 
 #conclusao{
+	margin: 1em 1em 0em 1em;
 	text-align: center;
 	position: relative;
 }

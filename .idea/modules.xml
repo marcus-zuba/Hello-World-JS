@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CSSAnimation/.idea/CSSAnimation.iml" filepath="$PROJECT_DIR$/../CSSAnimation/.idea/CSSAnimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/marcus-zuba.github.io.iml" filepath="$PROJECT_DIR$/.idea/marcus-zuba.github.io.iml" />
     </modules>
   </component>
