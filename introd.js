@@ -98,6 +98,8 @@ let $inputMatriz = $(".matriz-value");
 
 let foiMudado = false;
 
+/*
+
 let secaoMatriz = document.querySelector('#matriz1x1');
 let matriz = new Matriz(1,secaoMatriz);
 let h3a = document.createElement('h3');
@@ -107,6 +109,8 @@ h3b.innerHTML="";
 h3b.setAttribute('id', 'det');
 secaoMatriz.append(h3a);
 secaoMatriz.append(h3b);
+
+ */
 
 function processaMudancaMatriz() {
     if (foiMudado === false) {
