@@ -1,4 +1,4 @@
-// import Matriz from '/matriz.js';
+import {Matriz} from '/matriz.js';
 
 function mudarConteudoMotivacao(indice) {
     let $div = $('#conteudo-motivacao');
@@ -58,6 +58,10 @@ for (let itemMenu of itensMenu) {
     }
 }
 
+let secaoMatriz = document.querySelector('#matriz1x1');
+let matriz = new Matriz(1,secaoMatriz);
+let $inputMatriz = $(".matriz-value");
+
 function exibirConclusao() {
 
     //Colocando o determinante na matriz na frente dela
@@ -67,6 +71,9 @@ function exibirConclusao() {
     h3a.appendChild(text1);
     let h3b = document.createElement("h3");
     h3b.setAttribute('id', "det");
+    let textDet = $inputMatriz.val();
+    h3b.append(textDet);
+
     $matriz1x1.fadeOut('fast', function () {
         $matriz1x1.append(h3a);
         $matriz1x1.append(h3b);
@@ -94,51 +101,47 @@ function exibirConclusao() {
     });
 }
 
-let $inputMatriz = $(".matriz-value");
-
 let foiMudado = false;
 
-/*
-
-let secaoMatriz = document.querySelector('#matriz1x1');
-let matriz = new Matriz(1,secaoMatriz);
-let h3a = document.createElement('h3');
-h3a.innerHTML="Determinante:";
-let h3b = document.createElement('h3');
-h3b.innerHTML="";
-h3b.setAttribute('id', 'det');
-secaoMatriz.append(h3a);
-secaoMatriz.append(h3b);
-
- */
-
 function processaMudancaMatriz() {
+    let text = $inputMatriz.val();
     if (foiMudado === false) {
         foiMudado = true;
         exibirConclusao();
+    }else{
+        let $div = $('matriz1x1');
+        let $det = $('#det');
+        $det.empty();
+        $det.append(text);
+        $div.append($det);
     }
     let root = document.documentElement;
-    let text = $inputMatriz.val();
     if (text.length !== 0) {
-        if(text.length >= 3) {
+        if(text.length >= 3 && text.length < 6) {
+            root.style.setProperty('--larguraInputMatriz', (text.length) - 1);
             root.style.setProperty('--larguraMatriz', (text.length) - 1);
+            root.style.setProperty('--limiteInferiorChave', '15%');
+            root.style.setProperty('--limiteSuperiorChave', '85%');
+        }
+        else if(text.length >= 6){
+            root.style.setProperty('--larguraInputMatriz', (text.length) - 2);
+            root.style.setProperty('--larguraMatriz', (text.length) - 2);
+            root.style.setProperty('--limiteInferiorChave', '10%');
+            root.style.setProperty('--limiteSuperiorChave', '90%');
         }
         else{
+            root.style.setProperty('--larguraInputMatriz', text.length);
             root.style.setProperty('--larguraMatriz', text.length);
+            root.style.setProperty('--limiteInferiorChave', '25%');
+            root.style.setProperty('--limiteSuperiorChave', '75%');
         }
     } else {
-        root.style.setProperty('--larguraMatriz', (1));
+        root.style.setProperty('--larguraInputMatriz', (1));
         text = "0";
     }
-    let $div = $('matriz1x1');
-    let $det = $('#det');
-    $det.empty();
-    $det.append(text);
-    $div.append($det);
 }
 
 $inputMatriz.keyup(processaMudancaMatriz);
-$inputMatriz.focusout(processaMudancaMatriz);
 $inputMatriz.focus(function () {
     $(this).val('');
 });

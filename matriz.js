@@ -4,20 +4,54 @@ function criarInput() {
     inputMatriz.classList.add('editavel');
     inputMatriz.setAttribute('type', 'number');
     inputMatriz.setAttribute('placeholder', '0');
-    inputMatriz.setAttribute('value', '1');
     return inputMatriz;
 }
 
-export default class Matriz {
+function matrizToArray(matriz) {
+    let array = [];
+    for(let i=0; i<matriz.length;i++){
+        for(let j=0;j<matriz[i].length;j++){
+            array.push(matriz[i][j]);
+        }
+    }
+    return array;
+}
+
+export class Matriz {
+
+    divMatriz;
+    // arrayInputs = [];
+    matriz;
 
     constructor(dimensao, elemento) {
-        let divMatriz  = document.createElement('div');
-        divMatriz.classList.add('matriz');
+        this.divMatriz  = document.createElement('div');
+        this.divMatriz.classList.add('matriz');
         for(let i=0;i<(dimensao*dimensao);i++){
             let inputMatriz = criarInput();
-            divMatriz.appendChild(inputMatriz);
+            // this.arrayInputs.push(inputMatriz);
+            this.divMatriz.appendChild(inputMatriz);
         }
-        elemento.appendChild('divMatriz');
+        elemento.appendChild(this.divMatriz);
+    }
+
+    definirMatriz(matriz){
+        this.matriz = matriz;
+        let array = matrizToArray(this.matriz);
+        let i=0;
+        let arrayInputs = this.divMatriz.childNodes;
+        for(let input=0;input<arrayInputs.length;input++){
+            // alert(input.getAttribute('placeholder'));
+            arrayInputs[input].value = array[i];
+            i++;
+        }
+    }
+
+    desativarEditavel(){
+        let arrayInputs = this.divMatriz.childNodes;
+        for(let i=0;i<arrayInputs.length;i++){
+            arrayInputs[i].classList.remove('editavel');
+            arrayInputs[i].disabled = true;
+        }
     }
 
 

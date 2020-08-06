@@ -3,6 +3,7 @@
 :root {
 	--larguraMatriz: 1; /* Colunas */
 	--alturaMatriz: 1; /* Linhas */
+	--larguraInputMatriz: 1;
 	--limiteInferiorChave: 25%;
 	--limiteSuperiorChave: 75%;
 }
@@ -38,6 +39,10 @@ header{
 	margin-top: 1em;
 	margin-bottom: 1em;
 	box-sizing: border-box;
+}
+
+main{
+	text-align: center;
 }
 
 footer{
@@ -219,15 +224,14 @@ footer h4:hover{
 }
 
 .matriz{
-	top:15px;
 	box-sizing: border-box;
 	display: grid;
 	position: relative;
-	grid-template-columns: repeat(var(--larguraMatriz), 40px);
+	grid-template-columns: repeat(var(--larguraMatriz), 32px);
 	grid-column-gap: 0;
-	grid-template-rows: repeat(var(--altura),2em);
-	width: calc(31.5px*var(--largura) + 6px);
-	height: calc(2em*var(--altura));
+	grid-template-rows: repeat(var(--alturaMatriz),2em);
+	width: calc(32px*var(--larguraMatriz) + 6px);
+	height: calc(2em*var(--alturaMatriz));
 	border-left: 3px solid #3b3c3d;
 	border-right: 3px solid #3b3c3d;
 }
@@ -240,7 +244,9 @@ footer h4:hover{
 	display: block;
 	width: calc(100% + 6px);
 	height: 3px;
-	background-image: linear-gradient(to right, #3b3c3d 25%,transparent 25%, transparent 75%, #3b3c3d 75%);
+	background-image: linear-gradient(to right, #3b3c3d var(--limiteInferiorChave),
+						transparent var(--limiteInferiorChave),
+						transparent var(--limiteSuperiorChave), #3b3c3d var(--limiteSuperiorChave));
 }
 
 .matriz::before{
@@ -268,20 +274,21 @@ footer h4:hover{
 	text-shadow: none;
 	-webkit-rtl-ordering: logical;
 	box-sizing: border-box;
-	width: calc(31.5px*var(--larguraMatriz));
+	width: calc(31.5px*var(--larguraInputMatriz));
 	height: 1em;
-	background-color: #de4e4e;
 	border-width: 0;
 	border-radius: 3px;
 	outline: none;
-	color: #f5f5f5;
+	color: #303030;
 	text-align: center;
 	padding: 0;
 	font-size: 2em;
+	background-color: transparent;
 }
 
 .editavel{
-	background-color: #aeeab0;
+	background-color: #de4e4e;
+	color: #f5f5f5;
 }
 
 #emDesenvolvimento{
@@ -292,5 +299,23 @@ footer h4:hover{
 
 .vermelhoFlat{
 	color: #de4e4e;
+	/*color: green;*/
 }
 
+#explicacao2x2{
+	margin: 1em 1em;
+	text-align: center;
+	/*width: 60%;*/
+}
+
+.row{
+	margin: 1em 1em;
+	padding: 1em 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#explicacao2x2 h3{
+	padding: 0px 15px;
+}

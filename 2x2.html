@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>O maravilhoso mundo dos Determinantes</title>
 		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" href="imgs/favicon.png">
 	</head>
 	<body>
 		<header>
-			<h1 id="titulo-principal"> O maravilhoso mundo dos Determinantes </h1>
+			<a href="index.html"><img id="titulo-principal" src="imgs/logo_0.png" /></a>
 			<nav>
 				<ul>
 					<li><a href="index.html">Introdução</a></li>
@@ -17,13 +19,114 @@
 			</nav>
 		</header>
 		<main>
+			<h2>Vamos agora aprender como calcular o determinante nas matrizes 2x2!</h2>
+			<section id="explicacao2x2">
+				<div class="row">
+					<h3>Aqui temos uma matriz 2x2 padrão:</h3>
+					<div class="matriz">
+						<input class="matriz-value" type="number" value="1" disabled="true">
+						<input class="matriz-value" type="number" value="2" disabled="true">
+						<input class="matriz-value" type="number" value="3" disabled="true">
+						<input class="matriz-value" type="number" value="4" disabled="true">
+					</div>
+				</div>
+				<div class="row">
+					<h3>Em uma matriz, temos duas diagonais, a principal e a secundária. Essa é a diagonal principal:</h3>
+					<div class="matriz">
+						<input class="matriz-value editavel" type="number" value="1" disabled="true">
+						<input class="matriz-value" type="number" value="2" disabled="true">
+						<input class="matriz-value" type="number" value="3" disabled="true">
+						<input class="matriz-value editavel" type="number" value="4" disabled="true">
+					</div>
+					<h3>E essa é a diagonal secundária:</h3>
+					<div class="matriz">
+						<input class="matriz-value" type="number" value="1" disabled="true">
+						<input class="matriz-value editavel" type="number" value="2" disabled="true">
+						<input class="matriz-value editavel" type="number" value="3" disabled="true">
+						<input class="matriz-value" type="number" value="4" disabled="true">
+					</div>
 
-			<img src="desenvolvimento.gif" id="emDesenvolvimento"/>
+				</div>
+				<div class="row">
+					<h3>Para calcularmos o determinante de uma matriz 2x2, basta fazermos o produto da diagonal principal
+						e subtrair o produto da diagonal secundária.</h3>
+				</div>
+				<div class="row">
+					<h3>Por exemplo, vamos assumir que a matriz seja essa:</h3>
+					<div class="matriz">
+						<input class="matriz-value" type="number" value="5" disabled="true">
+						<input class="matriz-value" type="number" value="3" disabled="true">
+						<input class="matriz-value" type="number" value="5" disabled="true">
+						<input class="matriz-value" type="number" value="4" disabled="true">
+					</div>
+					<h3></h3>
+					<div class="matriz">
+						<input class="matriz-value editavel" type="number" value="5" disabled="true">
+						<input class="matriz-value" type="number" value="3" disabled="true">
+						<input class="matriz-value" type="number" value="5" disabled="true">
+						<input class="matriz-value editavel" type="number" value="4" disabled="true">
+					</div>
+					<h3>5 x 4 = 20</h3>
+					<div class="matriz">
+						<input class="matriz-value" type="number" value="5" disabled="true">
+						<input class="matriz-value editavel" type="number" value="3" disabled="true">
+						<input class="matriz-value editavel" type="number" value="5" disabled="true">
+						<input class="matriz-value" type="number" value="4" disabled="true">
+					</div>
+					<h3>5 x 3 = 15</h3>
+				</div>
+				<div class="row">
+					<h3>Então o Determinante será: 20-15 = 5</h3>
+				</div>
+				<div class="row">
+					<h3>Temos que ficar atentos quando há números negativos na matriz! Veja esse exemplo:</h3>
+					<div class="matriz">
+						<input class="matriz-value" type="number" value="2" disabled="true">
+						<input class="matriz-value" type="number" value="9" disabled="true">
+						<input class="matriz-value" type="number" value="-1" disabled="true">
+						<input class="matriz-value" type="number" value="6" disabled="true">
+					</div>
+					<h3></h3>
+					<div class="matriz">
+						<input class="matriz-value editavel" type="number" value="2" disabled="true">
+						<input class="matriz-value" type="number" value="9" disabled="true">
+						<input class="matriz-value" type="number" value="-1" disabled="true">
+						<input class="matriz-value editavel" type="number" value="6" disabled="true">
+					</div>
+					<h3>2 x 6 = 12</h3>
+					<div class="matriz">
+						<input class="matriz-value" type="number" value="2" disabled="true">
+						<input class="matriz-value editavel" type="number" value="9" disabled="true">
+						<input class="matriz-value editavel" type="number" value="-1" disabled="true">
+						<input class="matriz-value" type="number" value="6" disabled="true">
+					</div>
+					<h3>-1 x 9 = -9</h3>
+				</div>
+				<div class="row">
+					<h3>Então o Determinante será: 12-(-9) > 12+9 = 21</h3>
+				</div>
+			</section>
+			<section id="pratica 2x2">
+				<h2>Vamos brincar um pouco com as matrizes 2x2 agora!</h2>
+				<h3>Coloque valores na matriz abaixo e acompanhe o processo de cálculo do determinante!</h3>
+				<div class="row">
+					<div class="matriz" id="praticaMatriz">
+						<input class="matriz-value editavel" type="number" placeholder="0">
+						<input class="matriz-value editavel" type="number" placeholder="0">
+						<input class="matriz-value editavel" type="number" placeholder="0">
+						<input class="matriz-value editavel" type="number" placeholder="0">
+					</div>
+				</div>
+
+
+
+			</section>
 
 		</main>
 
 		<footer>
-				<h4><a href="https://www.linkedin.com/in/marcus-vinicius-dur%C3%A3es-zuba-627a44164/" target="_blank"> Marcus Vinicius Durães Zuba </a></h4>
+				<h4><a href="https://www.linkedin.com/in/marcus-vinicius-dur%C3%A3es-zuba-627a44164/" target="_blank">
+					Marcus Vinicius Durães Zuba </a></h4>
 				<h5> Direitos Reservados </h5>
 		</footer>
 
@@ -32,5 +135,5 @@
 	<script src="https://code.jquery.com/jquery-3.5.0.js"
 	integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
 	crossorigin="anonymous"></script>
-	<script src="2x2.js"></script>
+	<script type="module" src="2x2.js"></script>
 </html>
