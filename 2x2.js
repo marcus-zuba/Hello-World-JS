@@ -1,4 +1,4 @@
-import { Matriz } from '/matriz.js';
+import {Matriz} from '/matriz.js';
 
 let root = document.documentElement;
 root.style.setProperty('--larguraMatriz', 2);
