@@ -1,4 +1,4 @@
-// import {Matriz} from '/matriz.js';
+import {Matriz} from './matriz.js';
 
 function mudarConteudoMotivacao(indice) {
     let $div = $('#conteudo-motivacao');
@@ -59,7 +59,7 @@ for (let itemMenu of itensMenu) {
 }
 
 let secaoMatriz = document.querySelector('#matriz1x1');
-// let matriz = new Matriz(1,secaoMatriz);
+let matriz = new Matriz(1,secaoMatriz);
 let $inputMatriz = $(".matriz-value");
 
 function exibirConclusao() {
