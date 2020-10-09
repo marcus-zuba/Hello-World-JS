@@ -93,7 +93,7 @@ function exibirConclusao() {
     let a = document.createElement('a');
     a.innerHTML='Determinantes em Matrizes 2x2';
     a.setAttribute('href','2x2.html');
-    a.setAttribute('id','botaoConclusao');
+    a.classList.add('botaoConclusao');
     $conclusao.fadeOut('fast', function () {
         $conclusao.append(h3c);
         $conclusao.append(a);

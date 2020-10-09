@@ -20,23 +20,23 @@ function matrizToArray(matriz) {
 export class Matriz {
 
     divMatriz;
-    // arrayInputs = [];
-    matriz;
+    arrayInputs = [];
+    matrizEmArray;
 
     constructor(dimensao, elemento) {
         this.divMatriz  = document.createElement('div');
         this.divMatriz.classList.add('matriz');
         for(let i=0;i<(dimensao*dimensao);i++){
             let inputMatriz = criarInput();
-            // this.arrayInputs.push(inputMatriz);
+            this.arrayInputs.push(inputMatriz);
             this.divMatriz.appendChild(inputMatriz);
         }
         elemento.appendChild(this.divMatriz);
     }
 
     definirMatriz(matriz){
-        this.matriz = matriz;
-        let array = matrizToArray(this.matriz);
+        this.matrizEmArray = matriz;
+        let array = matriz;
         let i=0;
         let arrayInputs = this.divMatriz.childNodes;
         for(let input=0;input<arrayInputs.length;input++){
@@ -54,5 +54,12 @@ export class Matriz {
         }
     }
 
+    descatarPosicao(num){
+        this.arrayInputs[num].classList.add("editavel");
+    }
+
+    getArrayInputs(){
+        return this.arrayInputs;
+    }
 
 }
