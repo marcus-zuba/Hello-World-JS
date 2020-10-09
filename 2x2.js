@@ -41,11 +41,13 @@ function printarProcessoEResultadoUm(nums, secaoPraticaMatriz) {
     let matriz = new Matriz(2, divLinha);
     matriz.definirMatriz(nums);
     matriz.desativarEditavel();
+    let divLinha2 = document.createElement("div");
+    divLinha2.classList.add("row");
     h3 = document.createElement("h3");
     texto = document.createTextNode("Vamos multiplicar a diagonal principal:");
     h3.appendChild(texto);
-    divLinha.appendChild(h3);
-    let matrizDiagPrinc = new Matriz(2, divLinha);
+    divLinha2.appendChild(h3);
+    let matrizDiagPrinc = new Matriz(2, divLinha2);
     matrizDiagPrinc.definirMatriz(nums);
     matrizDiagPrinc.desativarEditavel();
     matrizDiagPrinc.descatarPosicao(0);
@@ -53,12 +55,15 @@ function printarProcessoEResultadoUm(nums, secaoPraticaMatriz) {
     h3 = document.createElement("h3");
     texto = document.createTextNode(nums[0] + "x" + nums[3] + " = " + nums[0] * nums[3]);
     h3.appendChild(texto);
-    divLinha.appendChild(h3);
+    divLinha2.appendChild(h3);
+    let divLinha3 = document.createElement("div");
+    divLinha3.classList.add("row");
+
     h3 = document.createElement("h3");
     texto = document.createTextNode("Agora a diagonal secundária:");
     h3.appendChild(texto);
-    divLinha.appendChild(h3);
-    let matrizDiagSec = new Matriz(2, divLinha);
+    divLinha3.appendChild(h3);
+    let matrizDiagSec = new Matriz(2, divLinha3);
     matrizDiagSec.definirMatriz(nums);
     matrizDiagSec.desativarEditavel();
     matrizDiagSec.descatarPosicao(1);
@@ -66,17 +71,19 @@ function printarProcessoEResultadoUm(nums, secaoPraticaMatriz) {
     h3 = document.createElement("h3");
     texto = document.createTextNode(nums[1] + "x" + nums[2] + " = " + nums[1] * nums[2]);
     h3.appendChild(texto);
-    divLinha.appendChild(h3);
-    let divLinha2 = document.createElement("div");
-    divLinha2.classList.add("row");
+    divLinha3.appendChild(h3);
+    let divLinha4 = document.createElement("div");
+    divLinha4.classList.add("row");
     h3 = document.createElement("h3");
     texto = document.createTextNode(`Então o determinante será: ${nums[0] * nums[3]}-${nums[1] * nums[2]} = 
     ${nums[0] * nums[3] - nums[1] * nums[2]}`);
     h3.appendChild(texto);
-    divLinha2.appendChild(h3);
+    divLinha4.appendChild(h3);
     secaoPraticaMatriz.innerHTML = "";
     secaoPraticaMatriz.appendChild(divLinha);
     secaoPraticaMatriz.appendChild(divLinha2);
+    secaoPraticaMatriz.appendChild(divLinha3);
+    secaoPraticaMatriz.appendChild(divLinha4);
     if(!jaAdicionouMatrizExercicio){
         printarMatrizPratica2();
         jaAdicionouMatrizExercicio = true;
